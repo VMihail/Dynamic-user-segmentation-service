@@ -8,8 +8,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestControllerAdvice
-public class ExceptionEmployeeControllerAdvice {
-  private final Logger logger = Logger.getLogger(ExceptionEmployeeControllerAdvice.class.getName());
+public class ExceptionControllerAdvice {
+  private final Logger logger = Logger.getLogger(ExceptionControllerAdvice.class.getName());
 
   @ExceptionHandler(RuntimeException.class)
   public ResponseEntity<String> ArithmeticExceptionHandler(final RuntimeException e) {

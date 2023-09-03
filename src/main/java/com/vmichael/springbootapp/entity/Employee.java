@@ -1,41 +1,32 @@
-package com.vmichael.userSegmentationService.entity;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+package com.vmichael.springbootapp.entity;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.lang.NonNull;
 
 import java.util.Objects;
 
-@Entity
+@Getter
+@NoArgsConstructor
 public class Employee {
-  @Id
-  @GeneratedValue
   private long id;
   private String name;
   private String email;
-
-  public Employee() {
-  }
 
   public Employee(@NonNull String name, @NonNull String email) {
     this.name = name;
     this.email = email;
   }
 
-  public String getName() {
-    return name;
+  public Employee(@NonNull long id, String name, String email) {
+    this(name, email);
+    this.id = id;
   }
 
-  public void setName(String name) {
+  public void setName(@NonNull String name) {
     this.name = name;
   }
 
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
+  public void setEmail(@NonNull String email) {
     this.email = email;
   }
 
