@@ -1,7 +1,7 @@
 {
   "url": "jdbc:postgresql://localhost:5432/user-segmentation",
-  "user_name": "mihildrozdov",
-  "password": "QWAszx2002",
+  "user_name": "",
+  "password": "",
   "employee_table_name": "employee",
   "segment_table_name": "segment",
   "employee_segment_table_name": "employee_segment"
