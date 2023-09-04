@@ -14,8 +14,8 @@ public abstract class AbstractRepository {
   protected AbstractRepository() throws IOException, ParseException, SQLException {
     this.dataBaseConfig = DataBaseConfig.of();
     this.jdbcConnection = new JdbcTemplate(
-     dataBaseConfig.getUrl(),
-     dataBaseConfig.getUserName(),
-     dataBaseConfig.getPassword());
+     dataBaseConfig.url(),
+     dataBaseConfig.userName(),
+     dataBaseConfig.password());
   }
 }

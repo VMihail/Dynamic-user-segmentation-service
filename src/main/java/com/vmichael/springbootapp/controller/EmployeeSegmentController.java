@@ -41,7 +41,7 @@ public class EmployeeSegmentController {
   ) {
     employeeSegmentRepository.addEmployeeToSegment(employeeId, segmentName);
     return ResponseEntity
-     .status(HttpStatus.OK)
+     .status(HttpStatus.CREATED)
      .body("added");
   }
 
@@ -52,7 +52,6 @@ public class EmployeeSegmentController {
   ) {
     employeeSegmentRepository.removeEmployeeFromSegment(employeeId, segmentName);
     return ResponseEntity
-     .status(HttpStatus.OK)
-     .body("removed");
+     .noContent().build();
   }
 }

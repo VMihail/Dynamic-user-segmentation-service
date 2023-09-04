@@ -9,31 +9,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-@Getter
-public final class DataBaseConfig {
+public record DataBaseConfig(String url, String userName, String password, String employeeTableName,
+                             String segmentTableName, String employeeSegmentTableName) {
   private static final Path pathConfig = Path.of("../springBootApp/src/main/resources/dataBaseConfig.json");
-
-  private String url;
-  private String userName;
-  private String password;
-  private String employeeTableName;
-  private String segmentTableName;
-  private String employeeSegmentTableName;
-
-  public DataBaseConfig(
-   String url,
-   String userName,
-   String password,
-   String employeeTableName,
-   String segmentTableName,
-   String employeeSegmentTableName) {
-    this.url = url;
-    this.userName = userName;
-    this.password = password;
-    this.employeeTableName = employeeTableName;
-    this.segmentTableName = segmentTableName;
-    this.employeeSegmentTableName = employeeSegmentTableName;
-  }
 
   public static DataBaseConfig of() throws IOException, ParseException {
     final StringBuilder jsonString = new StringBuilder();

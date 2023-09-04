@@ -36,7 +36,7 @@ public class EmployeeController {
   public ResponseEntity<Employee> createEmployee(@RequestBody final Employee employee) {
     employeeRepository.save(employee);
     return ResponseEntity
-     .status(HttpStatus.OK)
+     .status(HttpStatus.CREATED)
      .body(employee);
   }
 

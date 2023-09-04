@@ -13,7 +13,7 @@ import java.util.List;
 public class SegmentRepository extends AbstractRepository {
   public SegmentRepository() throws SQLException, IOException, ParseException {
     super();
-    tableName = super.dataBaseConfig.getSegmentTableName();
+    tableName = super.dataBaseConfig.segmentTableName();
   }
 
   public List<Segment> findAll(){

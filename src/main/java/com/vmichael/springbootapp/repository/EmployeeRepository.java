@@ -13,7 +13,7 @@ import java.util.List;
 public class EmployeeRepository extends AbstractRepository {
   public EmployeeRepository() throws SQLException, IOException, ParseException {
     super();
-    tableName = super.dataBaseConfig.getEmployeeTableName();
+    tableName = super.dataBaseConfig.employeeTableName();
   }
 
   public List<Employee> findAll() {

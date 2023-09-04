@@ -13,7 +13,7 @@ import java.util.List;
 public class EmployeeSegmentRepository extends AbstractRepository {
   public EmployeeSegmentRepository() throws SQLException, IOException, ParseException {
     super();
-    tableName = super.dataBaseConfig.getEmployeeSegmentTableName();
+    tableName = super.dataBaseConfig.employeeSegmentTableName();
   }
 
   public void addEmployeeToSegment(final long employeeId, final String segmentName) {
